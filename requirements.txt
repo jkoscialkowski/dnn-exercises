@@ -1,3 +1,4 @@
+livelossplot==0.4.1
 numpy==1.16.4
 pandas==0.24.2
 torch==1.1.0
