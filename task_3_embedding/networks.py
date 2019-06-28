@@ -30,12 +30,13 @@ class WordEmbedder(nn.Module):
         x = self.maxpool1(x)
         x = F.relu(self.conv2(x))
         x = self.maxpool2(x)
-        x = self.fc1(x.view(-1, 640))
+        x = self.fc1(x.view(-1, 512))
         return x
 
 class LanguageModel(nn.Module):
     def __init__(self):
         super().__init__()
+        self.lstm = nn.LSTM()
 
-    def forward(self, *input):
+    def forward(self, x):
         pass
